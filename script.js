@@ -10,10 +10,18 @@ document.getElementById('generate').addEventListener('click', () => {
   let hasUppercase = prompt('Yes or No, Do you want any uppercase letters?')
   let hasSymbols = prompt('Yes or No, Do you want any symbols?')
   let hasNumbers = prompt('Yes or No, Do you want any numbers?')
+    // if (hasLowercase === 'no' && hasUppercase ==='no' && hasSymbols ==='no' && hasNumbers ==='no'){
+    //   alert('Must choose at least one character type')
+    //   let hasLowercase = prompt('Yes or No, Do you want any lowercase letters?')
+    //   let hasUppercase = prompt('Yes or No, Do you want any uppercase letters?')
+    //   let hasSymbols = prompt('Yes or No, Do you want any symbols?')
+    //   let hasNumbers = prompt('Yes or No, Do you want any numbers?')
+    // }
 
   // setting a variable as empty string to receive whats needed
   let charSet = ''
 
+  // setting variables for potential inputs
   let lowercase = 'abcdefghijklmnopqrstuvwxyz'
   let uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
   let symbols = '!@#$%&*'
@@ -35,8 +43,10 @@ document.getElementById('generate').addEventListener('click', () => {
     charSet += numbers
   }
 
+  // Loop for choosing characters to add to generated password
   for (let i = 0; i < hasLength; i++) {
     generatedPassword += charSet[Math.floor(Math.random() * charSet.length)]
   }
+  // showing new password
   document.getElementById('password').textContent = generatedPassword
 })
