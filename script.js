@@ -11,15 +11,11 @@ document.getElementById('generate').addEventListener('click', () => {
   let hasSymbols = prompt('Yes or No, Do you want any symbols?')
   let hasNumbers = prompt('Yes or No, Do you want any numbers?')
 
-  //start over if none are chosen 
+  // start over if none are chosen 
 
-    // if (hasLowercase === 'no' && hasUppercase ==='no' && hasSymbols ==='no' && hasNumbers ==='no'){
-    //   alert('Must choose at least one character type')
-    //   let hasLowercase = prompt('Yes or No, Do you want any lowercase letters?')
-    //   let hasUppercase = prompt('Yes or No, Do you want any uppercase letters?')
-    //   let hasSymbols = prompt('Yes or No, Do you want any symbols?')
-    //   let hasNumbers = prompt('Yes or No, Do you want any numbers?')
-    // }
+    if (hasLowercase === 'no' && hasUppercase ==='no' && hasSymbols ==='no' && hasNumbers ==='no'){
+      alert('Must choose at least one character type')
+    }
 
   // setting a variable as empty string to receive whats needed
   let charSet = ''
