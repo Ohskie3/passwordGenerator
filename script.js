@@ -6,14 +6,14 @@ document.getElementById('generate').addEventListener('click', () => {
       alert("Length must be between 8 and 128 (use numbers)")
       prompt("Between 8 and 128, please choose how many characters you want your password to be.")
     }
-  let hasLowercase = prompt('Yes or No, Do you want any lowercase letters?')
-  let hasUppercase = prompt('Yes or No, Do you want any uppercase letters?')
-  let hasSymbols = prompt('Yes or No, Do you want any symbols?')
-  let hasNumbers = prompt('Yes or No, Do you want any numbers?')
+  let hasLowercase = confirm('Do you want any lowercase letters?')
+  let hasUppercase = confirm(Do you want any uppercase letters?')
+  let hasSymbols = confirm(Do you want any symbols?')
+  let hasNumbers = confirm(Do you want any numbers?')
 
   // start over if none are chosen 
 
-    if (hasLowercase === 'no' && hasUppercase ==='no' && hasSymbols ==='no' && hasNumbers ==='no'){
+    if (!hasLowercase && !hasUppercase && !hasSymbols && !hasNumbers){
       alert('Must choose at least one character type')
     }
 
@@ -29,16 +29,16 @@ document.getElementById('generate').addEventListener('click', () => {
   let generatedPassword = ''
 
   // logic
-  if (hasLowercase === 'yes') {
+  if (hasLowercase) {
     charSet += lowercase
   }
-  if (hasUppercase === 'yes') {
+  if (hasUppercase) {
     charSet += uppercase
   }
-  if (hasSymbols === 'yes') {
+  if (hasSymbols) {
     charSet += symbols
   }
-  if (hasNumbers === 'yes') {
+  if (hasNumbers) {
     charSet += numbers
   }
 
