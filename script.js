@@ -7,9 +7,9 @@ document.getElementById('generate').addEventListener('click', () => {
       prompt("Between 8 and 128, please choose how many characters you want your password to be.")
     }
   let hasLowercase = confirm('Do you want any lowercase letters?')
-  let hasUppercase = confirm(Do you want any uppercase letters?')
-  let hasSymbols = confirm(Do you want any symbols?')
-  let hasNumbers = confirm(Do you want any numbers?')
+  let hasUppercase = confirm('Do you want any uppercase letters?')
+  let hasSymbols = confirm('Do you want any symbols?')
+  let hasNumbers = confirm('Do you want any numbers?')
 
   // start over if none are chosen 
 
